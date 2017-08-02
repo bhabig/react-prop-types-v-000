@@ -28,16 +28,19 @@ Order.propTypes = {
   scoops: PropTypes.arrayOf(PropTypes.string).isRequired,
   orderInfo: PropTypes.shape({
     customerName: PropTypes.string.isRequired,
-    orderedAt: PropTypes.number.isRequired // We're using UNIX timestamps here
+    orderedAt: PropTypes.string.isRequired
   }).isRequired
 };
 
+const order = { customerName: 'Voldemort', orderedAt: new Date().toString() }
+
 ReactDOM.render(
   <Order
-    cone='false'
+    cone={false}
     size='large'
     scoops={['Choc. Chip Cookie Dough', 'Banana Nut', 'Choc. Chip Cookie Dough']}
-    orderInfo={ customerName= 'Voldemort', orderedAt= new Date() }
+    customerName="Voldemort"
+    orderInfo={ order }
   />,
   document.getElementById('root')
 );
