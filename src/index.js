@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 
 class Order extends React.Component {
-
   render() {
     return (
       <div className="order">
@@ -33,14 +32,12 @@ Order.propTypes = {
   }).isRequired
 };
 
-const order = { customerName: 'Bob', orderedAt: new Date() };
-
 ReactDOM.render(
   <Order
-    orderInfo={order}
     cone='false'
     size='large'
-    scoops={['blue', 'green', 'purple', 'yellow', 'blue', 'purple', 'red']}
+    scoops={['Choc. Chip Cookie Dough', 'Banana Nut', 'Choc. Chip Cookie Dough']}
+    orderInfo={ customerName= 'Voldemort', orderedAt= new Date() }
   />,
   document.getElementById('root')
 );
